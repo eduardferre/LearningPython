@@ -58,5 +58,28 @@ def anagrama(word1, word2):
         return False
     '''
 
-
 print(anagrama("Amor", "Roma"))
+
+# ---------------------------------------------------------------------- #
+
+'''
+Escribe un programa que imprima los 50 primeros números de la sucesión
+de Fibonacci empezando en 0.
+La serie Fibonacci se compone por una sucesión de números en la que siempre
+es la suma de los dos anteriores
+'''
+
+def fibonacci(length):
+    fibonacci_list = list(range(length))
+
+    for i in fibonacci_list:
+        if i == 0 or i == 1:
+            fibonacci_list[i] = i
+            print(fibonacci_list[i])
+        else:
+            fibonacci_list[i] = fibonacci_list[i - 2] + fibonacci_list[i - 1]
+            print(fibonacci_list[i])
+
+fibonacci(50)
+
+    
