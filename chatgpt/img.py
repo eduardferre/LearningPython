@@ -5,10 +5,6 @@ import config
 from rich import print
 from rich.table import Table
 
-from PIL import Image
-import requests
-from io import BytesIO
-
 def main():
     openai.api_key = config.api_key
 
