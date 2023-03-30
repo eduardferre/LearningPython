@@ -21,9 +21,11 @@ def main():
 
     print(table)
 
+    ctxt = typer.prompt("\nSpecify the context... ")
+
     context = {
             "role": "system", #it defines a context
-            "content": "You are helpful assistant."}
+            "content": ctxt}
     messages = [context]
 
     while True:
@@ -32,6 +34,12 @@ def main():
 
         if content == "new":
             print("New conversation has been created")
+
+            ctxt = typer.prompt("\nSpecify the context... ")
+
+            context = {
+                "role": "system", #it defines a context
+                "content": ctxt}
             messages = [context]
             content = __prompt()
 
