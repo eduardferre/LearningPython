@@ -14,6 +14,9 @@ def main():
 
     print("[bold green]DALL·E API with Python[/bold green]")
 
+    table = Table("Command", "Description")
+    table.add_row("exit", "Exit from application")
+
     while True:
         content = __prompt()
         num = typer.prompt("\nNumber of images to generate... ")
